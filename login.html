@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="/js/all.min.js"></script>
+    <style>
+      /* CSS 코드 작성 */
+      .table td,
+      .table th {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">LOGO</a>
+      </div>
+      <!-- container -->
+    </nav>
+    <!-- navbar -->
+    <!-- header -->
+    <header id="main-header" class="py-2 bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1><i class="fas fa-user"></i> Login</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ACTIONS-->
+    <section id="search" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row"></div>
+      </div>
+    </section>
+
+    <!-- posts -->
+    <section id="login">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 mx-auto">
+            <div class="card">
+              <div class="card-header">
+                <h4>LOGIN</h4>
+              </div>
+              <div class="card-body">
+                <form action="index.html">
+                  <div class="form-group">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" />
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" />
+                  </div>
+                  <input
+                    type="submit"
+                    value="Login"
+                    class="btn btn-primary btn-block"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- right col-3 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="lead text-center">
+              Dashboard &copy;
+              <span id="year"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery , bundle.js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      // 자바스크립트 코드 작성
+
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>

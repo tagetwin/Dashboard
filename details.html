@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="/js/all.min.js"></script>
+    <style>
+      /* CSS 코드 작성 */
+      .table td,
+      .table th {
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">LOGO</a>
+        <button
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- collapse collection -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!-- left menu -->
+          <ul class="navbar-nav">
+            <li class="nav-item px-2">
+              <a href="index.html" class="nav-link">Dashboard</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="posts.html" class="nav-link">Post</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="categories.html" class="nav-link">Category</a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="user.html" class="nav-link">User</a>
+            </li>
+          </ul>
+          <!-- right menu -->
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown mr-3">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                ><i class="fas fa-user"></i>홍길동
+              </a>
+              <div class="dropdown-menu">
+                <a href="profile.html" class="dropdown-item">
+                  <i class="fas fa-user-circle"></i>Profile
+                </a>
+                <a href="settings.html" class="dropdown-item">
+                  <i class="fas fa-cog"></i>Settings
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="login.html" class="nav-link">
+                <i class="fas fa-user-times"></i>Logout
+              </a>
+            </li>
+          </ul>
+          <!-- right menu -->
+        </div>
+        <!-- collapse collection -->
+      </div>
+      <!-- container -->
+    </nav>
+    <!-- navbar -->
+    <!-- header -->
+    <header id="main-header" class="py-2 bg-primary text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>Post One</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ACTIONS-->
+    <section id="actions" class="py-4 mb-4 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <a href="index.html" class="btn btn-light btn-block"
+              ><i class="fas fa-arrow-left"></i> Back To Dashboard
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="index.html" class="btn btn-success btn-block"
+              ><i class="fas fa-check"></i> Save Changes
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="index.html" class="btn btn-danger btn-block"
+              ><i class="fas fa-trash"></i> Delete Post
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details -->
+    <section id="details">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                <h4>Edit Posts</h4>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" value="Post one" />
+                  </div>
+                  <div class="form-group">
+                    <label for="category">Category</label>
+                    <select class="form-control">
+                      <option value="">Web Programming</option>
+                      <option value="" selected>JAVA</option>
+                      <option value="">SQL</option>
+                      <option value="">PYTHON</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="image">Img upload</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="image" />
+                      <label for="image" class="custom-file-label"
+                        >Choose File</label
+                      >
+                    </div>
+                    <small class="form-text text-muted">Max size 3mb</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="body">content</label>
+                    <textarea name="editor1" class="form-control">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt nihil enim voluptatibus sunt doloribus excepturi possimus nisi temporibus magnam, atque nulla, cum unde in eaque. Delectus enim qui suscipit officiis.</textarea
+                    >
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p class="lead text-center">
+              Dashboard &copy;
+              <span id="year"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery , bundle.js -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
+
+    <script>
+      // 자바스크립트 코드 작성
+      CKEDITOR.replace("editor1");
+      $("#year").text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
